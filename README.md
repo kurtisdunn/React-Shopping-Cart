@@ -1,4 +1,4 @@
- > - DEV BUILD
+ >  DEV BUILD
 
 # React-Shopping-Cart
 A step by step shopping cart using React & Bootstrap.
