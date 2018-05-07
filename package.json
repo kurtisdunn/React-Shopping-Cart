@@ -1,5 +1,5 @@
 {
-  "name": "eact-Form-Validation-Example",
+  "name": "React-Shopping-Cart",
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kurtisdunn/React-Form-Validation-Example.git"
+    "url": "git+https://github.com/kurtisdunn/React-Shopping-Cart.git"
   },
   "bugs": {
-    "url": "https://github.com/kurtisdunn/React-Form-Validation-Example/issues"
+    "url": "https://github.com/kurtisdunn/React-Shopping-Cart/issues"
   },
-  "homepage": "https://github.com/kurtisdunn/React-Form-Validation-Example#readme",
+  "homepage": "https://github.com/kurtisdunn/React-Shopping-Cart#readme",
   "author": "Kurtis Dunn",
   "dependencies": {
     "autoprefixer": "^7.1.6",
