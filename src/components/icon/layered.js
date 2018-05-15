@@ -14,7 +14,7 @@ export default class LayeredIcon extends React.Component {
       <div>
         <span className="fa-layers fa-fw">
           <i className={`fa fa-${this.props.type}`}></i>
-          <span className="fa-layers-counter" style={{ 'background': 'Tomato'}}>{this.props.count}</span>
+          <span className="fa-layers-counter" style={{ 'background': 'Tomato' }}>{this.props.count}</span>
         </span>
       </div>
     );
