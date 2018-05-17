@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './index.scss';
 
-import Input from '../../components/input';
+import Button from '../../components/button';
+import Input from '../../components/Input';
 import Tour from '../../components/tour';
 
 
@@ -75,10 +76,10 @@ export default class Home extends React.Component {
                </ul>
 
                <form className="card p-2">
-                 <div className="input-group">
-                   <input type="text" className="form-control" placeholder="Promo code" />
-                   <div className="input-group-append">
-                     <button type="submit" className="btn btn-secondary">Redeem</button>
+                 <div className="Input-group">
+                   <Input type="text" title="Promo code" />
+                   <div className="Input-group-append">
+                     <Button type="submit" class="btn-secondary">Redeem</Button>
                    </div>
                  </div>
                </form>
@@ -89,52 +90,40 @@ export default class Home extends React.Component {
                  <div className="row">
                    <div className="col-md-6 mb-3">
                      <label htmlFor="firstName">First name</label>
-                     <Input type="text" className="form-control" id="firstName" placeholder="" value="" validators={'required'} />
-                     <div className="invalid-feedback">
-                       Valid first name is required.
-                     </div>
+                     <Input type="text" className="form-control" id="firstName" title="" value="" validators={'required'} />
                    </div>
                    <div className="col-md-6 mb-3">
                      <label htmlFor="lastName">Last name</label>
-                     <input type="text" className="form-control" id="lastName" placeholder="" value="" required="" />
-                     <div className="invalid-feedback">
-                       Valid last name is required.
-                     </div>
+                     <Input type="text" className="form-control" id="lastName" title="" value="" required="" />
                    </div>
                  </div>
 
                  <div className="mb-3">
-                   <label htmlFor="username">Username</label>
-                   <div className="input-group">
-                     <div className="input-group-prepend">
-                       <span className="input-group-text">@</span>
+
+                   <div className="Input-group">
+                     <div className="Input-group-prepend">
+                       <span className="Input-group-text">@</span>
                      </div>
-                     <input type="text" className="form-control" id="username" placeholder="Username" required="" />
-                     <div className="invalid-feedback" style={{ 'width':'100%' }}>
-                       Your username is required.
-                     </div>
+                     <Input type="text" className="form-control" id="username" title="Username" required="" />
+
                    </div>
                  </div>
 
                  <div className="mb-3">
                    <label htmlFor="email">Email <span className="text-muted">(Optional)</span></label>
-                   <input type="email" className="form-control" id="email" placeholder="you@example.com" />
-                   <div className="invalid-feedback">
-                     Please enter a valid email address htmlFor shipping updates.
-                   </div>
+                   <Input type="email" className="form-control" id="email" title="you@example.com" />
+
                  </div>
 
                  <div className="mb-3">
                    <label htmlFor="address">Address</label>
-                   <input type="text" className="form-control" id="address" placeholder="1234 Main St" required="" />
-                   <div className="invalid-feedback">
-                     Please enter your shipping address.
-                   </div>
+                   <Input type="text" className="form-control" id="address" title="1234 Main St" required="" />
+
                  </div>
 
                  <div className="mb-3">
                    <label htmlFor="address2">Address 2 <span className="text-muted">(Optional)</span></label>
-                   <input type="text" className="form-control" id="address2" placeholder="Apartment or suite" />
+                   <Input type="text" className="form-control" id="address2" title="Apartment or suite" />
                  </div>
 
                  <div className="row">
@@ -144,9 +133,6 @@ export default class Home extends React.Component {
                        <option value="">Choose...</option>
                        <option>United States</option>
                      </select>
-                     <div className="invalid-feedback">
-                       Please select a valid country.
-                     </div>
                    </div>
                    <div className="col-md-4 mb-3">
                      <label htmlFor="state">State</label>
@@ -154,25 +140,19 @@ export default class Home extends React.Component {
                        <option value="">Choose...</option>
                        <option>CalihtmlFornia</option>
                      </select>
-                     <div className="invalid-feedback">
-                       Please provide a valid state.
-                     </div>
                    </div>
                    <div className="col-md-3 mb-3">
                      <label htmlFor="zip">Zip</label>
-                     <input type="text" className="form-control" id="zip" placeholder="" required="" />
-                     <div className="invalid-feedback">
-                       Zip code required.
-                     </div>
+                     <Input type="text" className="form-control" id="zip" title="" required="" />
                    </div>
                  </div>
                  <hr className="mb-4" />
                  <div className="custom-control custom-checkbox">
-                   <input type="checkbox" className="custom-control-input" id="same-address" />
+                   <Input type="checkbox" className="custom-control-Input" id="same-address" />
                    <label className="custom-control-label" htmlFor="same-address">Shipping address is the same as my billing address</label>
                  </div>
                  <div className="custom-control custom-checkbox">
-                   <input type="checkbox" className="custom-control-input" id="save-info" />
+                   <Input type="checkbox" className="custom-control-Input" id="save-info" />
                    <label className="custom-control-label" htmlFor="save-info">Save this inhtmlFormation htmlFor next time</label>
                  </div>
                  <hr className="mb-4" />
@@ -181,53 +161,41 @@ export default class Home extends React.Component {
 
                  <div className="d-block my-3">
                    <div className="custom-control custom-radio">
-                     <input id="credit" name="paymentMethod" type="radio" className="custom-control-input" checked="" required="" />
+                     <Input id="credit" name="paymentMethod" type="radio" className="custom-control-Input" checked="" required="" />
                      <label className="custom-control-label" htmlFor="credit">Credit card</label>
                    </div>
                    <div className="custom-control custom-radio">
-                     <input id="debit" name="paymentMethod" type="radio" className="custom-control-input" required="" />
+                     <Input id="debit" name="paymentMethod" type="radio" className="custom-control-Input" required="" />
                      <label className="custom-control-label" htmlFor="debit">Debit card</label>
                    </div>
                    <div className="custom-control custom-radio">
-                     <input id="paypal" name="paymentMethod" type="radio" className="custom-control-input" required="" />
+                     <Input id="paypal" name="paymentMethod" type="radio" className="custom-control-Input" required="" />
                      <label className="custom-control-label" htmlFor="paypal">PayPal</label>
                    </div>
                  </div>
                  <div className="row">
                    <div className="col-md-6 mb-3">
                      <label htmlFor="cc-name">Name on card</label>
-                     <input type="text" className="form-control" id="cc-name" placeholder="" required="" />
+                     <Input type="text" className="form-control" id="cc-name" title="" required="" />
                      <small className="text-muted">Full name as displayed on card</small>
-                     <div className="invalid-feedback">
-                       Name on card is required
-                     </div>
                    </div>
                    <div className="col-md-6 mb-3">
                      <label htmlFor="cc-number">Credit card number</label>
-                     <input type="text" className="form-control" id="cc-number" placeholder="" required="" />
-                     <div className="invalid-feedback">
-                       Credit card number is required
-                     </div>
+                     <Input type="text" className="form-control" id="cc-number" title="" required="" />
                    </div>
                  </div>
                  <div className="row">
                    <div className="col-md-3 mb-3">
                      <label htmlFor="cc-expiration">Expiration</label>
-                     <input type="text" className="form-control" id="cc-expiration" placeholder="" required="" />
-                     <div className="invalid-feedback">
-                       Expiration date required
-                     </div>
+                     <Input type="text" className="form-control" id="cc-expiration" title="" required="" />
                    </div>
                    <div className="col-md-3 mb-3">
                      <label htmlFor="cc-cvv">CVV</label>
-                     <input type="text" className="form-control" id="cc-cvv" placeholder="" required="" />
-                     <div className="invalid-feedback">
-                       Security code required
-                     </div>
+                     <Input type="text" className="form-control" id="cc-cvv" title="" required="" />
                    </div>
                  </div>
                  {/* <hr className="mb-4" /> */}
-                 <button className="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                 <Button class="btn-primary btn-lg btn-block" type="submit">Continue to checkout</Button>
                </form>
              </div>
            </div>
