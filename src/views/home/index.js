@@ -2,7 +2,8 @@ import React from 'react';
 import styles from './index.scss';
 
 import Button from '../../components/button';
-import Input from '../../components/Input';
+import Input from '../../components/input';
+import InputWithPlaceholder from '../../components/input/placeholder';
 import Tour from '../../components/tour';
 
 
@@ -89,8 +90,7 @@ export default class Home extends React.Component {
                <form className="needs-validation" noValidate="">
                  <div className="row">
                    <div className="col-md-6 mb-3">
-                     <label htmlFor="firstName">First name</label>
-                     <Input type="text" className="form-control" id="firstName" title="" value="" validators={'required'} />
+                     <InputWithPlaceholder type="text" className="form-control" id="firstName" title="First Name" value="" validators={'required'} />
                    </div>
                    <div className="col-md-6 mb-3">
                      <label htmlFor="lastName">Last name</label>
